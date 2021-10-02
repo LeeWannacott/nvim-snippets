@@ -1,13 +1,14 @@
 
+
 api = vim.api -- Shorten calling of the api.
 
-function fetch_data()
+function react_use_effect()
     local str = [[
-fetch('http://example.com/movies.json')
-  .then(response => response.json())
-  .then(data => console.log(data));
-}]]
-         
+useEffect(() => {
+  console.log("useEffect")
+},[]);
+]]
+
    function print_snippet()
         lines = {}
         for s in str:gmatch("[^\r\n]+") do
@@ -21,5 +22,5 @@ fetch('http://example.com/movies.json')
 
 end
 return{
-    fetch_data = fetch_data
+    react_use_effect = react_use_effect
 }

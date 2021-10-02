@@ -2,7 +2,7 @@
 api = vim.api -- Shorten calling of the api.
 function for_each()
 
-  local str = [[array1.forEach(element => console.log(element));]]
+  local str = [[array1.forEach(element, index) => console.log(element));]]
 
   function print_snippet()
     lines = {}
