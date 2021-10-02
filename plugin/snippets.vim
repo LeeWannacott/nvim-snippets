@@ -1,8 +1,4 @@
-fun! Arrow_function()
-    lua for k in pairs(package.loaded) do if k:match("^snippets") then package.loaded[k] = nill end end
-    lua require("snippets/arrow_function").arrow_function()
-endfun
-
+" functions for each snippet
 
 fun! For_each()
     lua for k in pairs(package.loaded) do if k:match("^snippets") then package.loaded[k] = nill end end
@@ -66,8 +62,35 @@ fun! If_elseif()
     lua require("snippets/if_else").if_else()
 endfun
 
+fun! Switch_statement()
+    lua for k in pairs(package.loaded) do if k:match("^snippets") then package.loaded[k] = nill end end
+    lua require("snippets/switch_statement").switch_statement()
+endfun
+
+
+fun! For_of()
+    lua for k in pairs(package.loaded) do if k:match("^snippets") then package.loaded[k] = nill end end
+    lua require("snippets/for_of").for_of()
+endfun
+
+
+fun! Make_object()
+    lua for k in pairs(package.loaded) do if k:match("^snippets") then package.loaded[k] = nill end end
+    lua require("snippets/make_object").make_object()
+endfun
+
+fun! Make_array()
+    lua for k in pairs(package.loaded) do if k:match("^snippets") then package.loaded[k] = nill end end
+    lua require("snippets/make_array").make_array()
+endfun
+
+
+fun! Make_date()
+    lua for k in pairs(package.loaded) do if k:match("^snippets") then package.loaded[k] = nill end end
+    lua require("snippets/date").make_date()
+endfun
+
 " Keymappings to call different functions.
-noremap <silent><leader>sa :call Arrow_function() <CR>
 noremap <silent><leader>sfe :call For_each() <CR>
 noremap <silent><leader>src :call React_class_component () <CR>
 noremap <silent><leader>srf :call React_functional_component() <CR>
@@ -77,5 +100,10 @@ noremap <silent><leader>sfc :call React_c_loop () <CR>
 noremap <silent><leader>sm :call Map_array () <CR>
 noremap <silent><leader>sp :call Promise () <CR>
 noremap <silent><leader>sfi :call For_in () <CR>
+noremap <silent><leader>sfo :call For_of () <CR>
 noremap <silent><leader>saa :call Async_await () <CR>
 noremap <silent><leader>sie :call If_elseif () <CR>
+noremap <silent><leader>ss :call Switch_statement () <CR>
+noremap <silent><leader>so :call Make_object () <CR>
+noremap <silent><leader>sa :call Make_array () <CR>
+noremap <silent><leader>sd :call Make_date () <CR>
