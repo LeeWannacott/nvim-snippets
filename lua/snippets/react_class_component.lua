@@ -5,26 +5,26 @@ api = vim.api -- Shorten calling of the api.
 
 function react_class_component()
     local str = [[
-  import React, { Component } from 'react';
-  import MyComponent from './MyComponent';
+import React, { Component } from 'react';
+import MyComponent from './MyComponent';
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      reptile: props.reptile,
-    };
-  }
+constructor(props) {
+  super(props);
+  this.state = {
+    reptile: props.reptile,
+  };
+}
 
-  class MyOtherComponent extends Component {
-    render() {
-      return (
-        <div>
-          <div>This is my other component.</div>
-          <MyComponent />
-        </div>
-      );
-    }
+class MyOtherComponent extends Component {
+  render() {
+    return (
+      <div>
+        <div>This is my other component.</div>
+        <MyComponent />
+      </div>
+    );
   }
+}
 
 export default MyOtherComponent;
 }]]

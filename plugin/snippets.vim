@@ -30,10 +30,22 @@ fun! React_use_state()
     lua require("snippets/react_use_state").react_use_state()
 endfun
 
+fun! React_c_loop()
+    lua for k in pairs(package.loaded) do if k:match("^snippets") then package.loaded[k] = nill end end
+    lua require("snippets/for_loop_c").for_loop_c()
+endfun
+
+fun! Map_array()
+    lua for k in pairs(package.loaded) do if k:match("^snippets") then package.loaded[k] = nill end end
+    lua require("snippets/map_array").map_array()
+endfun
+
 " Keymappings to call different functions.
 noremap <silent><leader>sa :call Arrow_function() <CR>
 noremap <silent><leader>sfp :call Fetch_data() <CR>
 noremap <silent><leader>sfe :call For_each() <CR>
-noremap <silent><leader>srf :call React_functional_component() <CR>
 noremap <silent><leader>src :call React_class_component () <CR>
+noremap <silent><leader>srf :call React_functional_component() <CR>
 noremap <silent><leader>sus :call React_use_state () <CR>
+noremap <silent><leader>sfc :call React_c_loop () <CR>
+noremap <silent><leader>sm :call Map_array () <CR>
