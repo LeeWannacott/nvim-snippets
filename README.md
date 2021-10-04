@@ -1,7 +1,6 @@
 # nvim-snippets
-
-```
-" Current keymappings to call different snippets.
+Current keymappings to call different snippets:
+```lua
 noremap <silent><leader>sfe :call For_each() <CR>
 noremap <silent><leader>src :call React_class_component () <CR>
 noremap <silent><leader>srf :call React_functional_component() <CR>
@@ -19,3 +18,4 @@ noremap <silent><leader>so :call Make_object () <CR>
 noremap <silent><leader>sa :call Make_array () <CR>
 noremap <silent><leader>sd :call Make_date () <CR>
 ```
+
